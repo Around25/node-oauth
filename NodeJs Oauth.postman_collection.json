@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "c21856f4-9245-4fa6-a7fd-c196a9a0c21d",
+		"name": "NodeJs Oauth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Okta OAuth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{client id}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "client_id:0oan8ghs1B7eL6g6i5d6, client_secret:TEfe_9jLgBxH9EPsuWNfEsgqyNl00dAVzWa9UoLG",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{your_scope}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{YOUR_ORG_PATH}/oauth2/default/v1/token",
+					"protocol": "https",
+					"host": [
+						"{YOUR_ORG_PATH}"
+					],
+					"path": [
+						"oauth2",
+						"default",
+						"v1",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"disabled": true
+						},
+						{
+							"key": "scope",
+							"value": "profile",
+							"disabled": true
+						}
+					]
+				},
+				"description": "testing"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
